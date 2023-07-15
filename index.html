@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="estilonovo.css">
+    <title>Amor</title>
+</head>
+<body>
+<header>
+    <h1> You and Me</h1>
+    <p>Nossa galeria, juntinhos</p>
+</header>
+    <nav>
+        <a href="texto.html">Carta de Amor</a>
+        
+    </nav>
+        <main>
+            <div class="container">
+              
+                    <div id="player">
+                        <audio controls> <source src="Musica/New West - Those Eyes (Lyrics) (320 kbps).mp3" type="audio/mp3">"
+                    </audio>
+        
+                    <div class="image-container">
+                        <div class="image"><img src="imagens/1.jpg" alt=""></div>
+                        <div class="image"><img src="imagens/2.jpg" alt=""></div>
+                        <div class="image"><img src="imagens/3.jpg" alt=""></div>
+                        <div class="image"><img src="imagens/4.jpg" alt=""></div>
+                        <div class="image"><img src="imagens/5.jpg" alt=""></div>
+                        <div class="image"><img src="imagens/6.jpg" alt=""></div>
+                        <div class="image"><img src="imagens/7.jpg" alt=""></div>
+                        <div class="image"><img src="imagens/8.jpg" alt=""></div>
+                        <div class="image"><img src="imagens/9.jpg" alt=""></div>
+                        <div class="image"><img src="imagens/10.jpg" alt=""></div>
+                    </div>
+        
+                <div class="popup-image">   
+                <span> &times;</span>    
+                <img src="imagens/1.jpg" alt=""> 
+                </div>
+
+                <strong>
+                    <p>Você é a pessoa mais especial de toda existência, meu Amor.
+                </strong></p>
+        </main>
+    
+</div>
+<footer>
+    <p><strong>Eu te amo, pelos séculos dos séculos.</strong></p>
+</footer>
+<script>
+
+document.querySelectorAll('.image-container img').forEach(image =>{
+    image.onclick = () =>{
+        document.querySelector('.popup-image').style.display = 'block'; 
+        document.querySelector('.popup-image img').src = image.getAttribute('src');
+    }
+});
+
+document.querySelector('.popup-image span').onclick = () =>{
+    document.querySelector('.popup-image').style.display = 'none';
+}
+</script>
+    
+</body>
+</html>

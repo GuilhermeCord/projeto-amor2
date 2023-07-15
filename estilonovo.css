@@ -1,0 +1,184 @@
+*{
+    margin: 0; padding: 0; 
+    box-sizing: border-box;
+}
+
+:root {
+    --cor0:#ddd; 
+    --cor1:#83e1ad;
+    --cor2:#880808;
+    --cor3:#ee5d5d;
+    --cor4:#1a5c37;
+    --cor5:#d4b4b4;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android: 'Android', cursive;
+}
+
+
+.container {
+position: relative;
+min-height: 100vh;
+background-color: #ddd;    
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor3),var(--cor5));
+    min-height: 150px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+
+
+header > h1 {
+    font-size: 40px;
+    font-family: var(--fonte-destaque);
+    font-weight: normal;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+header > p {
+    font-family: var(--fonte-destaque);
+    font-size: 1.2em;
+    color: white;
+    max-width: 600px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: auto;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.24);  
+}
+
+main {
+    
+    background-color: #ddd;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius:30px
+
+}
+
+main p {
+padding: 50px;
+text-align: center;
+padding-bottom: 5px;
+font-size: 2em;
+}
+
+main strong {
+    color: var(--cor3);
+    font-weight: bolder;
+    padding: 5px;
+}
+
+
+nav {
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.192);
+    
+}
+
+nav > a {
+    color: white;
+    padding: 10px;
+    font-family: var(--fonte-padrao);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition-duration: 0.5s;
+}
+
+
+h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: rgb(36, 33, 33);
+    text-align: center;
+}
+
+#player {
+    text-align: center;
+    padding: 15px;
+    
+}
+
+.container .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.container .image-container .image {
+    height: 300px;
+    width: 350px;
+    border: 10px  solid white;
+    box-shadow: 0 5px 15px rgb(7, 7, 7);
+    overflow: hidden;
+    cursor: pointer;
+   border-radius: 5px;
+
+}
+
+.container .image-container .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.7s;
+}
+
+.container .image-container .image:hover img {
+    transform: scale(1.2);
+}
+
+.container .popup-image {
+    position: fixed;
+    top: 0; left: 0;
+    background-color: rgba(0, 0, 0, 0.911);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+    
+}
+
+.container .popup-image span {
+    position: absolute;
+    top: 0; right: 10px;
+    font-size: 60px;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.container .popup-image img {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid white;
+    border-radius: 10px;
+    width: 650x;
+    object-fit: cover;
+}
+
+footer {
+    background-image: linear-gradient(to bottom, var(--cor3),var(--cor5));;
+    color: white;
+    text-align: center;
+    font-size: 0.9em;
+    padding: 5px;
+    
+}
+
+@media (max-width:768px) {
+    .container .popup-image img {
+        width: 95%;
+    } 
+}
